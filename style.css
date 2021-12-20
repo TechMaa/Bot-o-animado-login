@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: black;
+}
+
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type = "text"],.box input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+    width: 250px;
+    border-color: white;
+}
+
+.container{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.btn{
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border-radius: 7px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(black, #3498db);
+    animation: efeito 1.3s ease infinite;
+    transition: 1s ease;
+}
+
+@keyframes efeito{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.container:hover .btn::before{
+    background:#3498db;
+}
+
+a{
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 147px;
+    height: 47px;
+    background: black;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+}
+
